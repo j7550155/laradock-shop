@@ -1,3 +1,38 @@
+# laradock 練習
+   練習 Docker 部屬到 GCP VM <br>
+   DEMO網站:http://35.196.143.176/shop <br>
+實作:
+1. 會員相關功能
+2. 後台(新增、修改、查詢)
+3. 圖片上傳
+2. 購物車
+3. 資料庫交易
+4. 公告消息通知，包含未讀數量顯示 (redis) 
+5. 訂單送出 寄送email (redis)
+ ```
+ 後台登入 
+ admin001@gmail.com
+ admin001
+ ```
+
+```
+// install docker
+// install docker compose
+
+// run container
+docker-compose up -d nginx mysql redis
+
+// run workspace
+docker-compose exec workspace bash
+
+cd project1
+composer update
+
+// 執行列隊
+php artisan queue:work
+```
+
+   
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
