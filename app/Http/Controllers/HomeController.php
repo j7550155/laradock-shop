@@ -39,8 +39,9 @@ class HomeController extends Controller
         # code...
         $data='';
         $data = $request->all();
+        // test 
 
-        
+
         Auth::user()->unreadNotifications()->where('id', $data['id'])->first()->markAsRead();
         $unread = count(Auth::user()->unreadNotifications()->get());
         // dd($unread);
