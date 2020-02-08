@@ -37,8 +37,10 @@ class HomeController extends Controller
     public function markRead(Request $request)
     {
         # code...
+        $data='';
         $data = $request->all();
 
+        
         Auth::user()->unreadNotifications()->where('id', $data['id'])->first()->markAsRead();
         $unread = count(Auth::user()->unreadNotifications()->get());
         // dd($unread);
